@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A modern, elegant beauty salon website. Contact us to enquire about services and appointments.">
+<title>Élan Beauty Studio | Beauty & Care</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{--ink:#342521;--muted:#80706a;--cream:#fffaf6;--paper:#fffdfb;--blush:#f3e3df;--rose:#b86e79;--deep:#874b56;--gold:#b99a67;--line:#eadbd5;--sage:#7b8170}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.container{width:min(1160px,90%);margin:auto}
+.topbar{background:var(--ink);color:#f7eae5;text-align:center;padding:8px 12px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:rgba(255,250,246,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(234,219,213,.8)}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-family:'Playfair Display',Georgia,serif;font-size:1.65rem;line-height:1.05;letter-spacing:.02em}.brand span{display:block;margin-top:7px;font:600 .58rem 'DM Sans',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--deep)}nav{display:flex;gap:27px;align-items:center;font-size:.82rem;letter-spacing:.03em}nav a:not(.btn){transition:color .2s}nav a:not(.btn):hover{color:var(--rose)}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid var(--deep);border-radius:2px;padding:13px 21px;background:var(--deep);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}.btn:hover{background:var(--ink);border-color:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px #3425211c}.btn.outline{background:transparent;color:var(--deep)}.btn.outline:hover{background:var(--deep);color:white}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:620px;background:linear-gradient(120deg,#f7ebe6,#f1dfda);overflow:hidden}.hero-copy{padding:80px max(6vw,30px);align-self:center;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--deep);font-size:.68rem;font-weight:700}.eyebrow:before{content:'';width:28px;height:1px;background:var(--gold)}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:400;line-height:1.12}h1{font-size:clamp(3.25rem,5.6vw,5.6rem);letter-spacing:-.04em;margin:23px 0 20px}h1 em{font-weight:400;color:var(--deep)}.hero-copy p{max-width:440px;color:#75645e;font-size:.98rem;margin-bottom:30px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero-image{min-height:500px;position:relative;background:linear-gradient(0deg,rgba(52,37,33,.12),transparent 40%),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=90') center/cover}.hero-image:after{content:'BEAUTY • RITUAL • YOU';position:absolute;right:0;bottom:28px;background:var(--cream);padding:13px 19px;color:var(--deep);font-size:.65rem;letter-spacing:.2em}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:29px 0;border-bottom:1px solid var(--line);text-align:center}.trust>div{border-right:1px solid var(--line)}.trust>div:last-child{border:0}.trust strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;font-weight:500}.trust span{color:var(--muted);font-size:.78rem;letter-spacing:.03em}
+section{padding:94px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 46px}.section-head .eyebrow{justify-content:center}.section-head h2{font-size:clamp(2.4rem,4vw,3.6rem);letter-spacing:-.025em;margin:17px 0}.section-head p{color:var(--muted);font-size:.92rem}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service-card{padding:31px 28px 28px;background:var(--paper);border:1px solid #eee1dc;min-height:228px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}.service-card:after{content:'';position:absolute;width:95px;height:95px;border:1px solid #f0e1db;border-radius:50%;right:-36px;top:-35px}.service-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px #5b3a3010;border-color:#d9b9b3}.service-icon{width:47px;height:47px;border-radius:50%;background:var(--blush);color:var(--deep);display:grid;place-items:center;font-size:1.25rem;margin-bottom:20px}.service-card h3{font-size:1.48rem;margin-bottom:11px}.service-card p{color:var(--muted);font-size:.86rem;line-height:1.8}.service-card .price{display:block;margin-top:16px;color:var(--deep);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.about{background:#f3e7e2;position:relative;overflow:hidden}.about:before{content:'É';font-family:'Playfair Display',serif;position:absolute;font-size:30rem;line-height:1;right:-3%;bottom:-35%;color:#fff7f333;pointer-events:none}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;position:relative}.about-photo{min-height:500px;background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=90') center/cover;position:relative;box-shadow:18px 18px 0 #e6d0c8}.about-copy h2{font-size:clamp(2.6rem,4vw,3.8rem);margin:19px 0 22px}.about-copy p{color:#77645e;margin-bottom:16px;font-size:.94rem}.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:27px 0 30px;font-size:.84rem}.checks span:before{content:'✦';color:var(--deep);font-size:.8rem;margin-right:9px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.gallery img{width:100%;height:280px;object-fit:cover;display:block;filter:saturate(.82);transition:filter .3s,transform .3s}.gallery img:hover{filter:saturate(1.05);transform:translateY(-4px)}
+.booking{background:var(--ink);color:white;position:relative}.booking .section-head p{color:#d2c0b9}.booking .section-head .eyebrow{color:#d9b5ad}.booking .section-head .eyebrow:before{background:var(--gold)}.booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}.contact-details h3{font-size:1.9rem;margin:0 0 20px}.contact-item{padding:17px 0;border-bottom:1px solid #594843;font-size:.91rem}.contact-item small{display:block;color:#c9a69d;text-transform:uppercase;letter-spacing:.16em;font-size:.65rem;margin-bottom:5px}.contact-item a{color:white}.contact-details>p{color:#c7b4ad;font-size:.82rem;margin-top:22px}form{background:var(--paper);color:var(--ink);padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:17px;box-shadow:0 18px 45px #0002}.field.full{grid-column:1/-1}label{font-size:.76rem;font-weight:700;display:block;margin-bottom:7px;letter-spacing:.03em}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #e7d9d3;background:#fffaf8;border-radius:1px;color:var(--ink);outline:none;transition:border-color .2s}input:focus,select:focus,textarea:focus{border-color:var(--rose)}textarea{min-height:108px;resize:vertical}form .btn{grid-column:1/-1;width:100%;padding:15px}.form-note{grid-column:1/-1;color:var(--muted);font-size:.73rem;line-height:1.6}
+footer{padding:35px 0;background:#241916;color:#e9dcd6;text-align:center;font-size:.78rem;letter-spacing:.02em}footer strong{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:400;display:inline-block;margin-bottom:5px}footer span{display:inline-block;margin-top:12px;color:#bda9a1}.floating{position:fixed;right:22px;bottom:22px;z-index:15;box-shadow:0 8px 24px #0002}
+@media(max-width:850px){nav{gap:14px;font-size:.78rem}nav .nav-cta{display:none}.hero{min-height:auto}.hero-copy{padding:65px 6%}.hero-image{min-height:440px}.services{grid-template-columns:repeat(2,1fr)}.about-grid,.booking-grid{grid-template-columns:1fr;gap:38px}.about-photo{min-height:390px}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:250px}}
+@media(max-width:560px){.topbar{font-size:.58rem;letter-spacing:.12em}.nav{padding:15px 0;align-items:flex-start;flex-direction:column;gap:14px}.brand{font-size:1.5rem}nav{width:100%;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.74rem}.hero{grid-template-columns:1fr}.hero-copy{padding:55px 6% 48px}h1{font-size:3.35rem}.hero-image{min-height:330px}.trust{gap:7px;padding:21px 0}.trust>div{padding:0 5px}.trust strong{font-size:.92rem}.trust span{font-size:.68rem}.trust span{display:block}section{padding:65px 0}.section-head{margin-bottom:32px}.services{grid-template-columns:1fr}.service-card{min-height:0;padding:26px}.about-photo{min-height:310px;box-shadow:10px 10px 0 #e6d0c8}.checks{grid-template-columns:1fr 1fr;font-size:.78rem}.gallery{gap:9px}.gallery img{height:180px}form{grid-template-columns:1fr;padding:22px}.field.full,.form-note,form .btn{grid-column:1}.floating{right:12px;bottom:12px;padding:11px 15px;font-size:.72rem}}
+</style>
+</head>
+<body>
+<div class="topbar">BEAUTY • CARE • CONFIDENCE &nbsp; | &nbsp; APPOINTMENTS BY ENQUIRY</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">Élan Beauty Studio<span>Beauty & Care</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      <a class="btn nav-cta" href="#contact">Book a Visit</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">Your beauty, our passion</div>
+    <h1>Your beauty.<br><em>Your own ritual.</em></h1>
+    <p>Pause, unwind and make a little time for yourself. Discover beauty and care services in a warm, welcoming space created around your confidence.</p>
+    <div class="hero-actions"><a class="btn" href="#contact">Enquire for Appointment ↗</a><a class="btn outline" href="#services">Explore Services</a></div>
+  </div>
+  <div class="hero-image" role="img" aria-label="Elegant beauty salon interior"></div>
+</section>
+<div class="container trust">
+  <div><strong>Personalised Care</strong><span>Service tailored to you</span></div>
+  <div><strong>Welcoming Space</strong><span>Relax and feel refreshed</span></div>
+  <div><strong>Beauty Essentials</strong><span>For your special moments</span></div>
+</div>
+<section id="services">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">What we offer</div><h2>Your beauty, beautifully cared for</h2><p>Choose a service and contact us to confirm availability and pricing. Service names and prices below are sample content—replace them with the parlour's verified list.</p></div>
+    <div class="services">
+      <article class="service-card"><div class="service-icon">✦</div><h3>Skin & Facial Care</h3><p>Refreshing facial and skincare services chosen to suit your needs.</p><span class="price">Price on enquiry</span></article>
+      <article class="service-card"><div class="service-icon">✧</div><h3>Hair Styling</h3><p>Styling and hair-care services for everyday looks and special occasions.</p><span class="price">Price on enquiry</span></article>
+      <article class="service-card"><div class="service-icon">❀</div><h3>Bridal & Party Makeup</h3><p>Makeup services for celebrations, events and memorable days.</p><span class="price">Price on enquiry</span></article>
+      <article class="service-card"><div class="service-icon">♡</div><h3>Manicure & Pedicure</h3><p>Beauty care for hands and feet in a calm, comfortable setting.</p><span class="price">Price on enquiry</span></article>
+      <article class="service-card"><div class="service-icon">✿</div><h3>Threading & Waxing</h3><p>Personal grooming services with attention to comfort and care.</p><span class="price">Price on enquiry</span></article>
+      <article class="service-card"><div class="service-icon">✺</div><h3>Packages & Combos</h3><p>Ask us about available service combinations for your occasion.</p><span class="price">Ask for details</span></article>
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-photo" role="img" aria-label="Beauty salon styling station"></div>
+    <div class="about-copy"><div class="eyebrow">A moment just for you</div><h2>Feel cared for.<br>Leave glowing.</h2><p>We believe beauty appointments should feel personal, comfortable and effortless. Our aim is to help every guest feel welcome while finding services that fit their style and occasion.</p><p>Tell us what you have in mind and we'll help you enquire about the right service.</p><div class="checks"><span>Friendly service</span><span>Personal attention</span><span>Special occasion care</span><span>Easy enquiries</span></div><a class="btn" href="#contact">Talk to Our Team</a></div>
+  </div>
+</section>
+<section id="gallery">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Our atmosphere</div><h2>Beauty in every detail</h2><p>Replace these inspiration photos with the parlour's own work and interior photos before publishing.</p></div>
+    <div class="gallery">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Beauty portrait inspiration">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1522335789203-a6a549f1d7c5?auto=format&fit=crop&w=600&q=80" alt="Makeup tools and beauty products">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=600&q=80" alt="Beauty and skincare products">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Hair styling inspiration">
+    </div>
+  </div>
+</section>
+<section class="booking" id="contact">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's plan your visit</h2><p>Send an enquiry and confirm the service, date and price directly with the parlour.</p></div>
+    <div class="booking-grid">
+      <div class="contact-details">
+        <h3>Contact details</h3>
+        <div class="contact-item"><small>Business name</small><div>Élan Beauty Studio <em>(replace with actual name)</em></div></div>
+        <div class="contact-item"><small>Address</small><div>Add the verified parlour address here</div></div>
+        <div class="contact-item"><small>Phone / WhatsApp</small><div>Add the verified contact number here</div></div>
+        <div class="contact-item"><small>Opening hours</small><div>Add confirmed opening and closing times</div></div>
+        <p style="color:#d8c9c2;font-size:.88rem;margin-top:20px">Please update these placeholders with the business's verified Google listing details before sharing this website with customers.</p>
+      </div>
+      <form id="enquiryForm">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required inputmode="tel" placeholder="Your contact number"></div>
+        <div class="field"><label for="service">Service</label><select id="service" name="service"><option>Facial / Skin Care</option><option>Hair Styling</option><option>Bridal / Party Makeup</option><option>Manicure / Pedicure</option><option>Threading / Waxing</option><option>Other / Ask a question</option></select></div>
+        <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
+        <div class="field full"><label for="message">Additional details</label><textarea id="message" name="message" placeholder="Tell us what you need"></textarea></div>
+        <button class="btn" type="submit">Prepare Enquiry Message ↗</button>
+        <p class="form-note">This demo form opens your device's message app only after a WhatsApp number is configured in the code. It does not store or send form data by itself.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="container"><strong>Élan Beauty Studio</strong><br>Beauty & care, with a personal touch.<br><span>© <span id="year"></span> Élan Beauty Studio. Replace this demo brand with the actual parlour name.</span></div></footer>
+<a class="btn floating" href="#contact" aria-label="Enquire about an appointment">Enquire ↗</a>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+// Add the parlour's verified WhatsApp number below using country code and digits only, e.g. 919876543210.
+const WHATSAPP_NUMBER = '';
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!WHATSAPP_NUMBER){alert('Website demo: please add the parlour\\'s verified WhatsApp number in the code before using this form.');return;}
+  const d=new FormData(this);
+  const message=`Hello! I would like to enquire about an appointment.\\nName: ${d.get('name')}\\nPhone: ${d.get('phone')}\\nService: ${d.get('service')}\\nPreferred date: ${d.get('date')||'Flexible'}\\nDetails: ${d.get('message')||'None'}`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener');
+});
+</script>
+</body>
+</html>
